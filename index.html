@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+    .link:hover{
+        color: black;
+    }
+
+    .submit{
+        background-color: black;
+        color: white;
+        transition: transform 0.3s ease-out;
+    }
+
+    .submit:hover{
+        background-color: white;
+        color: black;
+        transform: scale(1.05);
+    }
+    
+</style>
+<head>
+    <title>Portfolio Content</title>
+    <script src="https://kit.fontawesome.com/47614e035b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Stephen David Q. Condino</h1>
+    <img src="pic.jpg" style="width: 150pt; height: 150pt; padding-bottom: 20pt;">
+
+    <div style="padding-bottom: 20pt;">
+        <i class="fa-brands fa-github" style="color: #020203;"></i><a href="https://github.com/StephenGotHacked"><span class="link"style="padding-right: 20pt;">My GitHub</span></a>
+        <i class="fa-regular fa-user" style="color: #020203;"></i><a href="https://www.linkedin.com/in/stephen-condino-a91477277/"><span class="link"style="padding-right: 20pt;">My LinkedIn</span></a>
+        <i class="fa-regular fa-envelope" style="color: #07090d;"></i><a href="mailto:8215348@ntc.edu.ph?subject=Welcome"><span class="link" style="padding-right: 20pt;">My Email</span></a>
+    </div>
+
+    <h3>TECHNOLOGIES:</h3>
+    <table border = 10;>
+        <thead>
+            <tr>
+                <th>Front-End</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>Database</th>
+                <th>Concepts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML 5</td>
+                <td>Django</td>
+                <td>Express</td>
+                <td>MySQL</td>
+                <td>AJAX</td>
+            </tr>
+            <tr>
+                <td>CSS 3</td>
+                <td>Flask</td>
+                <td>Mongose</td>
+                <td>MongoDB</td>
+                <td>OOP</td>
+            </tr>
+            <tr>
+                <td>BOOSTRAP</td>
+                <td>Unitest</td>
+                <td>React</td>
+                <td></td>
+                <td>REST</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <p>SOCIAL SNAKES</p>
+    <a href="#">
+        <i class="fa-solid fa-code" style="color: #000000; border: solid 3px black;"></i><br><br>
+    </a>
+
+<label>My Portfolio link: <a href="#" class="link">VISIT</a></label><br><br>
+
+<form>
+    <h3>Contact Me: </h3>
+    <label>Name:</label><input type = "text" name="names" placeholder="Name" required>
+    <label>E-mail:</label><input type = "email" name="emails" placeholder="Email" required><br><br>
+    <label>Message:</label><br>
+    <textarea name="text" placeholder="Message" required></textarea><br><br>
+    <button class="submit" onclick="Submit()">SEND MESSAGE</button>
+</form>
+    
+<script>
+    function Submit(){
+        var name = document.getElementsByName("names")[0].value;
+        var email = document.getElementsByName("emails")[0].value;
+        var message = document.getElementsByName("text")[0].value;
+
+        if(name == "" || email == "" || message == ""){
+            alert("Please fill in all the required fields."); 
+        } else{
+            alert("Mail sent successfully!");
+        }
+    }
+</script>
+
+</body>
+</html>
